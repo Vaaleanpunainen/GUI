@@ -2,11 +2,11 @@ from tkinter import *
 
 window=Tk()
 
-def print_entry():
-    print(e1_value.get())
-    t1.insert(END,e1_value.get())
+def km_to_miles():
+    miles=float(e1_value.get())*1.609
+    t1.insert(END, miles)
 
-b1=Button(window, text="Execute", command=print_entry)
+b1=Button(window, text="Execute", command=km_to_miles)
 b1.grid(row=0,column=0)
 
 e1_value=StringVar()
