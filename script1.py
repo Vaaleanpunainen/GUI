@@ -2,7 +2,10 @@ from tkinter import *
 
 window=Tk()
 
-b1=Button(window, text="Button")
+def print_success():
+    print("Success!")
+
+b1=Button(window, text="Execute", command=print_success)
 b1.grid(row=0,column=0)
 
 e1=Entry(window)
