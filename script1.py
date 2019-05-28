@@ -2,13 +2,14 @@ from tkinter import *
 
 window=Tk()
 
-def print_success():
-    print("Success!")
+def print_entry():
+    print(e1_value.get())
 
-b1=Button(window, text="Execute", command=print_success)
+b1=Button(window, text="Execute", command=print_entry)
 b1.grid(row=0,column=0)
 
-e1=Entry(window)
+e1_value=StringVar()
+e1=Entry(window, textvariable=e1_value)
 e1.grid(row=0,column=1)
 
 t1=Text(window, heigh=1, width=25)
